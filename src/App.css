@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+/*
+IMPORTS
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Source+Code+Pro:wght@600&display=swap');
+
+/*
+VARIABLES
+ */
+:root {
+  --color-purple-primary: #8C52FF;
+  --color-purple-secondary: #CCCCEA;
+  --color-purple-white: #E4F6F6;
+  --color-casal-primary: #28615B;
+  --color-casal-dark: #28615B;
+  --color-dark-primary: #17423D;
+
+  --font-size-subtitle: 16px;
+  --font-size-title: 58px;
+  --font-size-title-shadow: 90px;
+  --font-size-tab: 22px;
+  --font-size-tab-shadow: 35px;
+  --font-size-terminal: 14px;
+  --font-weight-semi: 600;
+  --font-weight-black: 900;
+  --font-weight-regular: 400;
+  --font-family-primary: 'Inter', sans-serif;
+  --font-family-terminal: 'Source Code Pro', monospace;
+  --font-style-italic: italic;
+  --font-style-normal: normal;
+
+  --font-inter-subtitle:
+          var(--font-style-normal)
+          var(--font-weight-semi)
+          var(--font-size-subtitle)
+          var(--font-family-primary);
+
+  --font-inter-subtitle-regular:
+          var(--font-style-normal)
+          var(--font-weight-regular)
+          var(--font-size-subtitle)
+          var(--font-family-primary);
+
+  --font-inter-title:
+          var(--font-style-italic)
+          var(--font-weight-black)
+          var(--font-size-title)
+          var(--font-family-primary);
+
+  --font-inter-title-shadow:
+          var(--font-style-italic)
+          var(--font-weight-black)
+          var(--font-size-title-shadow)
+          var(--font-family-primary);
+
+  --font-inter-tab:
+          var(--font-style-italic)
+          var(--font-weight-black)
+          var(--font-size-tab)
+          var(--font-family-primary);
+
+  --font-inter-tab-shadow:
+          var(--font-style-italic)
+          var(--font-weight-black)
+          var(--font-size-tab-shadow)
+          var(--font-family-primary);
+
+  --font-terminal:
+          var(--font-style-normal)
+          var(--font-weight-semi)
+          var(--font-size-terminal)
+          var(--font-family-terminal);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*
+APP
+ */
+.app-root {
+    background: var(--color-purple-white);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-terminalContainer {
+    width: calc(100% - 20px);
+    height: 94%;
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-hints {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.hint-root {
+    padding: 5px 15px 5px 15px;
+    background: var(--color-purple-secondary);
+    border-radius: 50px;
+    font: var(--font-inter-subtitle);
+    height: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hint-hintManual {
+    width: 172px;
+    margin-right: 25px;
+}
+
+.hint-hintTerminal {
+    width: 492px;
+}
+
+.app-codeSnippet {
+    border-radius: 12px;
+    background: var(--color-casal-primary);
+    padding: 0 5px 0 5px;
+    color: var(--color-purple-white);
+    font-weight: var(--font-weight-regular) !important;
+}
+
+.app-terminal {
+    position: relative;
+    flex:1;
+    margin-right: 25px;
 }
