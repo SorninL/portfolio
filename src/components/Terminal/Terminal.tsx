@@ -18,7 +18,7 @@ export default function Terminal(props: any) {
             {id.job}<br/>
             Age : {id.age}<br/>
             Years of professional experience : {id.proExpYears}<br/>
-            Is Open To Work : {id.isOpenToWork ? "Yes, please contact me !":  "No, sorry but for any questions please contact me."}
+            Is Open To Work : {id.isOpenToWork ? <span>Yes, please contact me !</span> :  <span>No, sorry but for any questions, feel free to contact me buy using <span className="app-codeSnippet terminal-codeSnippet">contact</span> command</span>}
         </p>
 
     const [content, setContent] = useState(defaultContent)
@@ -63,4 +63,19 @@ function TerminalInput(props: any) {
 
 
     )
+}
+
+enum TerminalStates {
+    DEFAULT
+}
+
+class TerminalManager {
+
+    private static instance: TerminalManager;
+    private state: TerminalStates;
+
+    constructor() {
+        TerminalManager.instance = this;
+        this.state = TerminalStates.DEFAULT;
+    }
 }

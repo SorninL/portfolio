@@ -14,6 +14,7 @@
     color: var(--color-purple-white);
     margin-top: 25px;
     height: 89%;
+    line-height: 22px;
 }
 
 .terminal-inputContainer {
@@ -52,4 +53,8 @@
     right: 25px;
     height: 20px;
     cursor: pointer;
+}
+
+.terminal-codeSnippet {
+    background: #17423D !important;
 }
